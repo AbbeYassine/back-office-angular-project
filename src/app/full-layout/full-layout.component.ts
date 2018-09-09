@@ -59,6 +59,16 @@ export class FullLayoutComponent implements OnInit {
             name: 'Formulaire',
             url: '/example/formulaire'
           }]
+      },
+      {
+        name : 'Gestion des produits',
+        visible : true ,
+        childrens : [
+          {
+            name : 'Ajout produit',
+            url : 'manage-product/add-product'
+          }
+        ]
       }
     ];
   }
