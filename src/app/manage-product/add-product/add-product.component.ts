@@ -3,6 +3,8 @@ import {Product} from "../../shared/models/product";
 import {ProductService} from "../../shared/services/product.service";
 import {Subscription} from "rxjs";
 
+declare var swal: any;
+
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -25,7 +27,7 @@ export class AddProductComponent implements OnInit {
     this.busy = this.productService.addProduct(this.product)
       .subscribe(
         (data) => {
-          console.log(data);
+          swal('Succées', 'Ajout produit avec succées', 'success');
         }
       );
 
